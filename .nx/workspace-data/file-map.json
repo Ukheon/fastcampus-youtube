@@ -1,0 +1,162 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.6.3",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".cursorrules",
+        "hash": "9630450347876109864"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16794952425405934068"
+      },
+      {
+        "file": ".yarn/releases/yarn-4.7.0.cjs",
+        "hash": "2849274119310605014"
+      },
+      {
+        "file": ".yarnrc.yml",
+        "hash": "17127478188097143493"
+      },
+      {
+        "file": "README.md",
+        "hash": "1763142920117566962"
+      },
+      {
+        "file": "biome.jsonc",
+        "hash": "18056392844793016788"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3456958381423369935"
+      },
+      {
+        "file": "package.json",
+        "hash": "2286188788738527415"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5662765493713250157"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "107130400551894483"
+      }
+    ],
+    "projectFileMap": {
+      "@ukheon/esbuild-config": [
+        {
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
+        },
+        {
+          "file": "packages/esbuild-config/index.js",
+          "hash": "8716080667522498683"
+        },
+        {
+          "file": "packages/esbuild-config/package.json",
+          "hash": "17345652874986700083",
+          "deps": [
+            "npm:esbuild@0.16.17"
+          ]
+        }
+      ],
+      "@ukheon/react-components-layout": [
+        {
+          "file": "packages/react/components/layout/build.js",
+          "hash": "16126834113257414532"
+        },
+        {
+          "file": "packages/react/components/layout/package.json",
+          "hash": "2117807656656351772",
+          "deps": [
+            "@ukheon/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "9129874831085128207"
+        }
+      ],
+      "@ukheon/themes": [
+        {
+          "file": "packages/themes/build.js",
+          "hash": "16126834113257414532"
+        },
+        {
+          "file": "packages/themes/package.json",
+          "hash": "14235172977929849461",
+          "deps": [
+            "@ukheon/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/themes/scripts/build-css-module.js",
+          "hash": "16844178063543025097"
+        },
+        {
+          "file": "packages/themes/src/classes/index.ts",
+          "hash": "7362236945490193505"
+        },
+        {
+          "file": "packages/themes/src/classes/typography.ts",
+          "hash": "4613592670763236173"
+        },
+        {
+          "file": "packages/themes/src/index.ts",
+          "hash": "1844858065170678075"
+        },
+        {
+          "file": "packages/themes/src/variables/box.ts",
+          "hash": "1461245777324016548"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/index.ts",
+          "hash": "7326832966542287352"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/scale.ts",
+          "hash": "7227875050283308958"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/dark.ts",
+          "hash": "681337314988286385"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/index.ts",
+          "hash": "18024143103640227694"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/light.ts",
+          "hash": "5111065768491833496"
+        },
+        {
+          "file": "packages/themes/src/variables/index.ts",
+          "hash": "3906210158627771294"
+        },
+        {
+          "file": "packages/themes/src/variables/typography.ts",
+          "hash": "7786597730280278244"
+        },
+        {
+          "file": "packages/themes/tsconfig.json",
+          "hash": "13298943998655870093"
+        }
+      ]
+    }
+  }
+}

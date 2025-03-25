@@ -1,0 +1,32 @@
+{
+  "run": {
+    "command": "nx build @ukheon/themes",
+    "startTime": "2025-03-25T07:06:42.600Z",
+    "endTime": "2025-03-25T07:06:47.316Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@ukheon/esbuild-config:build",
+      "target": "build",
+      "projectName": "@ukheon/esbuild-config",
+      "hash": "12926157375376646042",
+      "startTime": "2025-03-25T07:06:42.610Z",
+      "endTime": "2025-03-25T07:06:43.441Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@ukheon/themes:build",
+      "target": "build",
+      "projectName": "@ukheon/themes",
+      "hash": "16150428921036454154",
+      "startTime": "2025-03-25T07:06:43.458Z",
+      "endTime": "2025-03-25T07:06:47.308Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

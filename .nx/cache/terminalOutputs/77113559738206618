@@ -1,0 +1,15 @@
+
+node:internal/modules/run_main:128
+    triggerUncaughtException(
+    ^
+TypeError [Error]: [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///home/happyblock/ukheon/packages/themes/package.json" needs an import attribute of type "json"
+    at load$1 (file:///home/happyblock/ukheon/.pnp.loader.mjs:1536:21)
+[90m    at nextLoad (node:internal/modules/esm/hooks:868:28)[39m
+[90m    at Hooks.load (node:internal/modules/esm/hooks:451:26)[39m
+[90m    at handleMessage (node:internal/modules/esm/worker:196:24)[39m
+[90m    at Immediate.checkForMessages (node:internal/modules/esm/worker:138:28)[39m
+[90m    at process.processImmediate (node:internal/timers:483:21)[39m {
+  code: [32m'ERR_IMPORT_ASSERTION_TYPE_MISSING'[39m
+}
+
+Node.js v20.18.1

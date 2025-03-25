@@ -1,0 +1,216 @@
+{
+  /* Biome 스키마 버전 정의 */
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+
+  // 버전 관리 시스템 설정
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true // .gitignore 파일 사용
+  },
+
+  // 파일 처리 설정
+  "files": {
+    "ignoreUnknown": false, // 알 수 없는 파일 형식 무시 여부
+    "ignore": [] // 무시할 파일 패턴 목록
+  },
+
+  // 코드 포맷팅 설정
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true, // .editorconfig 파일 사용
+    "formatWithErrors": true, // 에러가 있어도 포맷팅 진행
+    "indentStyle": "space", // 들여쓰기 스타일
+    "indentWidth": 2, // 들여쓰기 크기
+    "lineEnding": "lf", // 줄바꿈 문자
+    "lineWidth": 150, // 최대 줄 길이
+    "bracketSpacing": true // 객체 리터럴의 중괄호 내부 공백
+  },
+
+  // 린터 설정
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false, // 추천 규칙 사용 안함
+
+      // 복잡성 관련 규칙
+      "complexity": {
+        "noUselessTernary": "error", // 불필요한 삼항 연산자 사용 금지
+        "noUselessFragments": "error", // 불필요한 Fragments 사용 금지
+        "noUselessStringConcat": "error", // 불필요한 문자열 연결 금지
+        "noUselessRename": "error", // 가져오기, 내보내기, 구조분해시 같은이름으로 변경 금지
+        "useArrowFunction": "error", // 함수 표현식 대신 화살표 함수 사용
+        "useOptionalChain": "error", // 체인 논리 표현식 대신 옵셔널 체이닝 사용
+        "noBannedTypes": "error", // Function, Object, String 등 banned type 사용 금지
+        "noExtraBooleanCast": "error", // 불필요한 boolean 형변환 금지
+        "noMultipleSpacesInRegularExpressionLiterals": "error", // 정규식에서 불필요한 공백 금지
+        "noUselessCatch": "error", // 불필요한 catch 블록 금지
+        "noUselessTypeConstraint": "error", // 불필요한 타입 제약 금지
+        "useLiteralKeys": "error" // 객체 키에 리터럴 사용
+      },
+
+      // 성능 관련 규칙
+      "performance": {
+        "noAccumulatingSpread": "error", // 중첩된 spread 연산자 사용 금지
+        "noBarrelFile": "error", // barrel 파일(index.ts로 재익스포트) 사용 금지
+        "noReExportAll": "error", // * as로 모든 모듈 재익스포트 금지
+        "useTopLevelRegex": "error" // 정규식을 최상위 레벨에서 선언
+      },
+
+      // 정확성 관련 규칙
+      "correctness": {
+        "noConstAssign": "error", // const 변수 재할당 금지
+        "useJsxKeyInIterable": "error", // 반복 가능한 요소에 JSX key 사용
+        "noConstantCondition": "error", // 조건문에 상수 사용 금지
+        "noEmptyCharacterClassInRegex": "error", // 빈 문자 클래스 정규식 금지
+        "noEmptyPattern": "error", // 빈 패턴 매칭 금지
+        "noGlobalObjectCalls": "error", // 전역 객체 메서드 호출 금지
+        "noInnerDeclarations": "error", // 중첩된 변수 선언 금지
+        "noInvalidConstructorSuper": "error", // 잘못된 super() 호출 금지
+        "noInvalidUseBeforeDeclaration": "off", // 변수 선언 전 사용 금지
+        "noNewSymbol": "error", // Symbol 생성자 사용 금지
+        "noNonoctalDecimalEscape": "error", // 8진수 이스케이프 금지
+        "noPrecisionLoss": "error", // 정밀도 손실 가능한 연산 금지
+        "noSelfAssign": "error", // 자기 자신에 할당 금지
+        "noSetterReturn": "error", // setter에서 값 반환 금지
+        "noSwitchDeclarations": "error", // switch 문 내에서 변수 선언 금지
+        "noUndeclaredVariables": "error", // 선언되지 않은 변수 사용 금지
+        "noUnreachable": "error", // 도달할 수 없는 코드 금지
+        "noUnreachableSuper": "error", // 도달할 수 없는 super 호출 금지
+        "noUnsafeFinally": "error", // finally 블록에서 예외 발생 시 처리 금지
+        "noUnsafeOptionalChaining": "error", // 옵셔널 체이닝 사용 시 안전하지 않은 경우 금지
+        "noUnusedImports": "error", // 사용되지 않는 import 금지
+        "noUnusedLabels": "warn", // 사용되지 않는 label 금지
+        "noUnusedVariables": "warn", // 사용되지 않는 변수 경고
+        "useArrayLiterals": "off", // 배열 리터럴 사용
+        "useExhaustiveDependencies": "error", // useEffect, useCallback 등에서 종속성이 올바르게 지정되어있는지 확인
+        "useHookAtTopLevel": "error", // React Hook을 최상위 레벨에서만 호출
+        "useIsNan": "error", // isNaN 함수 사용
+        "useValidForDirection": "error", // for-in, for-of 루프에서 유효한 대상 사용
+        "useYield": "error", // yield 키워드 사용
+        "noInvalidGridAreas": "error" // 잘못된 grid-area 값 사용 금지
+      },
+
+      "nursery": {
+        "noDuplicateProperties": "error" // 중복 속성 사용 금지
+      },
+
+      // 스타일 관련 규칙
+      "style": {
+        "noDefaultExport": "error", // default export 사용 금지
+        "noNamespace": "error", // namespace 사용 금지
+        "noParameterAssign": "error", // 매개변수 재할당 금지
+        "noVar": "error", // var 키워드 사용 금지
+        "useConst": "error", // 한번만 사용되는 변수는 const 사용
+        "useExportType": "error", // 타입 관련 파일은 export type 사용
+        "useImportType": "error", // 타입 관련 파일은 import type 사용
+        "useSelfClosingElements": "error", // 자식 요소가 없을때 자체 닫는 태그 사용
+        "useSingleVarDeclarator": "error", // 단일 변수 선언자 사용
+        "useAsConstAssertion": "error", // const 단언 사용
+        "useCollapsedElseIf": "error", // else if 문을 축약형으로 사용
+        "useShorthandAssign": "error", // 축약 할당 사용
+        "noRestrictedGlobals": "error", // 제한된 전역 변수 사용 금지
+        "noUselessElse": "error", // 불필요한 else 문 사용 금지
+        "useTemplate": "error", // 필요시 템플릿 리터널 사용
+        "noUnusedTemplateLiteral": "error", // 사용되지 않는 템플릿 리터널 사용 금지
+        "noNonNullAssertion": "error" // 널 아님 단언 사용 금지
+      },
+
+      // 의심스러운 패턴 관련 규칙
+      "suspicious": {
+        "noAsyncPromiseExecutor": "error", // Promise 생성자에 async 함수 사용 금지
+        "noCatchAssign": "error", // catch 절에서 에러 객체 재할당 금지
+        "noClassAssign": "error", // 클래스 재할당 금지
+        "noConsole": "warn", // console 사용 금지
+        "noCompareNegZero": "error", // -0과 비교 금지
+        "noControlCharactersInRegex": "error", // 제어 문자를 포함한 정규식 금지
+        "noDebugger": "error", // debugger 사용 금지
+        "noDoubleEquals": "error", // ==, != 사용 금지
+        "noDuplicateCase": "error", // switch 문에서 중복 case 금지
+        "noDuplicateClassMembers": "error", // 클래스에서 중복 멤버 금지
+        "noDuplicateObjectKeys": "error", // 객체에서 중복 키 금지
+        "noDuplicateParameters": "error", // 함수에서 중복 매개변수 금지
+        "noEmptyBlockStatements": "error", // 빈 블록 문 금지
+        "noExplicitAny": "off", // any 타입 사용 금지
+        "noExtraNonNullAssertion": "error", // 불필요한 널 아님 단언 금지
+        "noFallthroughSwitchClause": "error", // switch 문에서 fallthrough 금지
+        "noFunctionAssign": "error", // 함수 재할당 금지
+        "noGlobalAssign": "error", // 전역 변수 재할당 금지
+        "noImportAssign": "error", // import 재할당 금지
+        "noMisleadingCharacterClass": "error", // 잘못된 문자 클래스 정규식 금지
+        "noMisleadingInstantiator": "error", // 잘못된 생성자 호출 금지
+        "noPrototypeBuiltins": "error", // Object.prototype 메서드 사용 금지
+        "noRedeclare": "error", // 재선언 금지
+        "noShadowRestrictedNames": "error", // 제한된 이름 섀도잉 금지
+        "noSparseArray": "error", // 희소 배열 금지
+        "noUnsafeDeclarationMerging": "error", // 안전하지 않은 선언 병합 금지
+        "noUnsafeNegation": "error", // 안전하지 않은 부정 사용 금지
+        "useAwait": "error", // await 키워드 사용
+        "useGetterReturn": "error", // getter에서 값 반환
+        "useValidTypeof": "error" // 유효한 typeof 사용
+      }
+    },
+    "ignore": ["**/dist", "**/.eslintrc.cjs"] // 린팅 무시할 파일
+  },
+
+  // JavaScript 관련 설정
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double", // JSX 속성에 쌍따옴표 사용
+      "quoteProperties": "asNeeded", // 필요한 경우만 객체 속성에 따옴표
+      "trailingCommas": "all", // 항상 후행 쉼표 사용
+      "semicolons": "always", // 세미콜론 항상 사용
+      "arrowParentheses": "always", // 화살표 함수 매개변수 항상 괄호
+      "bracketSameLine": true, // JSX 닫는 괄호 같은 줄에 위치
+      "quoteStyle": "single", // 작은따옴표 사용
+      "attributePosition": "auto", // JSX 속성 위치 자동
+      "bracketSpacing": true // 객체 리터럴 중괄호 내부 공백
+    }
+  },
+
+  // 파일 타입별 오버라이드 설정
+  "overrides": [
+    {
+      "include": ["*.ts", "*.tsx", "*.mts", "*.cts"], // TypeScript 파일
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noConstAssign": "off", // const 변수 재할당 금지
+            "noGlobalObjectCalls": "off", // 전역 객체 메서드 호출 금지
+            "noInvalidConstructorSuper": "off", // 잘못된 super() 호출 금지
+            "noNewSymbol": "off", // Symbol 생성자 사용 금지
+            "noSetterReturn": "off", // setter에서 값 반환 금지
+            "noUndeclaredVariables": "off", // 선언되지 않은 변수 사용 금지
+            "noUnreachable": "off", // 도달할 수 없는 코드 금지
+            "noUnreachableSuper": "off" // 도달할 수 없는 super 호출 금지
+          },
+          "style": {
+            "noArguments": "error", // arguments 객체 사용 금지
+            "noVar": "error", // var 키워드 사용 금지
+            "useConst": "error" // const 키워드 사용
+          },
+          "suspicious": {
+            "noDuplicateClassMembers": "off", // 클래스에서 중복 멤버 금지
+            "noDuplicateObjectKeys": "off", // 객체에서 중복 키 금지
+            "noDuplicateParameters": "off", // 함수에서 중복 매개변수 금지
+            "noFunctionAssign": "off", // 함수 재할당 금지
+            "noImportAssign": "off", // import 재할당 금지
+            "noRedeclare": "off", // 재선언 금지
+            "noUnsafeNegation": "off", // 안전하지 않은 부정 사용 금지
+            "useGetterReturn": "off" // getter에서 값 반환
+          }
+        }
+      }
+    },
+    {
+      "include": ["*.d.ts"], // 타입 선언 파일
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off" // 타입 선언 파일에서는 미사용 변수 허용
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[31m[1mInternal Error[22m[39m: Package for [38;2;215;95;0m@ukheon/[39m[38;2;215;135;95mthemes[39m[38;2;135;175;255m@[39m[38;2;135;175;255mworkspace:packages/themes/scripts[39m not found in the project
+    at Sb (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:190:943)
+    at Wue (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:190:1949)
+    at mat (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:189:3352)
+    at async /home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:189:2629
+    at async _n.mktempPromise (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:9:45513)
+    at async Object.Db (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:189:2568)
+    at async qE.execute (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:518:516)
+    at async qE.validateAndExecute (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:94:787)
+    at async t.run (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:98:3249)
+    at async wE.execute (/home/happyblock/ukheon/.yarn/releases/yarn-4.7.0.cjs:429:497)
